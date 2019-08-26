@@ -31,7 +31,7 @@ client.on('message', msg => {
     if (command.adminRole && msg.channel.type === 'dm') {
       return msg.reply(`La commande ne peut pas être exécutée ici`)
     }
-    if (command.adminRole && !isAdmin(message)) {
+    if (command.adminRole && !isAdmin(msg)) {
       return msg.reply(`Tu es trop faible pour exécuter cette commande !`)
     }
     if (args.length < command.requiredArgs) {
