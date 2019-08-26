@@ -26,16 +26,16 @@ client.on('message', msg => {
 
     const command = client.commands.get(commandName)
     if (command === undefined) {
-      return msg.reply(`La commande n'existe pas ! \`${prefix}help\` pour afficher la liste des commandes`)
+      return msg.reply(`la commande n'existe pas ! \`${prefix}help\` pour afficher la liste des commandes`)
     }
     if (command.adminRole && msg.channel.type === 'dm') {
-      return msg.reply(`La commande ne peut pas être exécutée ici`)
+      return msg.reply(`la commande ne peut pas être exécutée ici`)
     }
     if (command.adminRole && !isAdmin(msg)) {
-      return msg.reply(`Tu es trop faible pour exécuter cette commande !`)
+      return msg.reply(`tu es trop faible pour exécuter cette commande !`)
     }
     if (args.length < command.requiredArgs) {
-      return msg.reply(`La commande nécessite ${command.requiredArgs} arguments !\nusage: \`${prefix}${command.name} ${command.usage}\``)
+      return msg.reply(`la commande nécessite ${command.requiredArgs} arguments !\nusage: \`${prefix}${command.name} ${command.usage}\``)
     }
     try {
       command.execute(msg, args)
