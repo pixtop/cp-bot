@@ -12,7 +12,7 @@ fs.readdirSync('./commands').filter(file => file.endsWith('.js')).forEach(file =
 
 function isAdmin(message) {
   let role = message.guild.roles.find(r => r.hasPermission('ADMINISTRATOR'))
-  if (role.members.find(m => m.user === user)) {
+  if (role.members.find(m => m.user === message.author)) {
     return true
   }
   return false
