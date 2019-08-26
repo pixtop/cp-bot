@@ -1,0 +1,9 @@
+{
+  "name": "Cubot",
+  "author": "PixTop",
+  "description": "Another Discord bot",
+  "version": "1.0.0",
+  "dependencies": {
+    "discord.js": "~11.5",
+  }
+}
